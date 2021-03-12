@@ -6,36 +6,26 @@ public class GetRandom {
         
     }
     
-    public double returnArray() {
-        Random rand = new Random(); // creating Random object
+    public double [] returnArray() {
         double [] array_sizes = {50000, 100000, 150000, 200000, 250000, 300000, 350000, 400000, 450000, 500000};
-        int elems = 50000;
-        while (elems <=500000) {
-            double [] arr = new double[elems];
-            for (int i = 0; i < arr.length; i++) {
-                arr[i] = rand.nextInt();
-            }
-            return arr;
+        for (int i = 0; i < array_sizes.length; i++) {
+            callRandom(array_sizes[i]);
         }
-       
     }
     
-    public static void main(String [] args) {
-        GetRandom array = new GetRandom();
-        array.returnArray();
+    public double [] callRandom(double size) {
+         Random rand = new Random(); 
+         double [] array = new double[size];
+         for (int i = 0; i < size; i++) {
+                array[i] = rand.nextDouble();
+            }
+            return array; 
     }
-    // public static void main(String[] args) {
-    //     Random rand = new Random(); // creating Random object
-    //     double [] array_sizes = {50000, 100000, 150000, 200000, 250000, 300000, 350000, 400000, 450000, 500000};
-    //     int elems = 50000;
-    //     while (elems <=500000) {
-    //         double [] arr = new double[elems];
-    //         for (int i = 0; i < arr.length; i++) {
-    //             arr[i] = rand.nextDouble(); // storing random integers in an array
-    //             System.out.println(arr[i]); // printing each array element
-    //         }
-    //     }
+    
+    // public static void main(String [] args) {
+    //     GetRandom array = new GetRandom();
+    //   // array.returnArray();
     // }
-    
+
 }   
    

@@ -3,7 +3,11 @@ import java.io.*;
 
 public class bubbleSort implements Sorts {
     
-    public void sort(double [] a) {
+    public bubbleSort() {
+        
+    }
+    
+    public double [] sort(double [] a) {
         int n = a.length; 
         for (int i = 0; i < n-1; i++) {
             for (int j = 0; j < n-i-1; j++) {
@@ -14,17 +18,18 @@ public class bubbleSort implements Sorts {
                 }
             }
         }
+        return a; 
     }
     
-    public static void main(String [] args) {
-        bubbleSort ob = new bubbleSort(); 
-        double arr[] = {64, 34, 25, 12, 22, 11, 90}; 
-        ob.sort(arr); 
-        int n = arr.length; 
-        // for (int i=0; i<n; ++i) {
-        //      System.out.println(arr[i] + " "); 
-        // }
-    }
+    // public static void main(String [] args) {
+    //     bubbleSort ob = new bubbleSort(); 
+    //     double arr[] = {64, 34, 25, 12, 22, 11, 90}; 
+    //     ob.sort(arr); 
+    //     int n = arr.length; 
+    //     // for (int i=0; i<n; ++i) {
+    //     //      System.out.println(arr[i] + " "); 
+    //     // }
+    // }
     
   
 }

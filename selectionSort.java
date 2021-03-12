@@ -3,12 +3,13 @@ import java.lang.*;
 import java.lang.String;
 import java.io.*;
 
-public class selectionSort {
+public class selectionSort implements Sorts {
 
-    public void sort(double[] a) {
+    public double [] sort(double[] a) {
         for(int i = 0; i < a.length - 1; i++) {
             swap(a, i, findmin(a, i));
         }
+        return a; 
     }
 
     public int findmin(double[] a, int start) {
@@ -27,13 +28,13 @@ public class selectionSort {
         a[j] = temp;
     }
     
-    public static void main(String [] args) {
-        selectionSort example = new selectionSort();
-        double[] numbers = {7,21,45,67,3};
-        example.sort(numbers);
-        // for(int i = 0; i < numbers.length; i++) {
-        //     System.out.println("Number: " + numbers[i] + "\n");
-        // }
-    }
+    // public static void main(String [] args) {
+    //     selectionSort example = new selectionSort();
+    //     double[] numbers = {7,21,45,67,3};
+    //     example.sort(numbers);
+    //     // for(int i = 0; i < numbers.length; i++) {
+    //     //     System.out.println("Number: " + numbers[i] + "\n");
+    //     // }
+    // }
 
 }

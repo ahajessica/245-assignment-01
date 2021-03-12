@@ -1,5 +1,6 @@
+import java.io.*;
 
-public class mergeSort {
+public class mergeSort implements Sorts {
     
     
     public double [] merge (double [] left, double [] right, double [] target) {
@@ -42,7 +43,7 @@ public class mergeSort {
         return right;
     }
     
-    public void mergesort(double [] arr) {
+    public void sort(double [] arr) {
         if (arr.length > 1) {
             double [] left = get_left(arr);
             double [] right = get_right(arr);
@@ -53,14 +54,14 @@ public class mergeSort {
         }
     }
     
-    public static void main(String[] args) {
-        double [] left = new double [] {25.0, 38.0, 54.0,59.0};
-        double [] right = new double [] {27.0, 39.0, 65.0,84.0};
-        double [] target = new double [] {left.length + right.length};
+    // public static void main(String[] args) {
+    //     double [] left = new double [] {25.0, 38.0, 54.0,59.0};
+    //     double [] right = new double [] {27.0, 39.0, 65.0,84.0};
+    //     double [] target = new double [] {left.length + right.length};
         
-        mergeSort example1 = new mergeSort();
-        example1.mergesort(target);
-    }
+    //     mergeSort example1 = new mergeSort();
+    //     example1.mergesort(target);
+    // }
 }
 
 

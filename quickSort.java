@@ -1,7 +1,10 @@
-public class quickSort {
+import java.io.*;
+
+public class quickSort implements Sorts {
     
-    public void sort(double [] a) {
+    public double [] sort(double [] a) {
         quicksort(a,0,a.length-1);
+        return a; 
     }
 
     public int partition(double [] arr, int low, int high) {
@@ -35,15 +38,15 @@ public class quickSort {
         } 
     }
     
-    public static void main(String [] args) {
-        quickSort t = new quickSort();
-        double a[] = {64, 34, 25, 12, 22, 11, 90}; 
-        t.sort(a);
-        int n = a.length; 
-        for (int i=0; i<n; i++) {
-            System.out.println(a[i] + " "); 
-        }
-    }
+    // public static void main(String [] args) {
+    //     quickSort t = new quickSort();
+    //     double a[] = {64, 34, 25, 12, 22, 11, 90}; 
+    //     t.sort(a);
+    //     int n = a.length; 
+    //     for (int i=0; i<n; i++) {
+    //         System.out.println(a[i] + " "); 
+    //     }
+    // }
     
     
 }
